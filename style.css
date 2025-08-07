@@ -1,0 +1,152 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #0f172a;
+  color: white;
+}
+
+/* Navbar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
+}
+
+header.scrolled {
+  background: #1e293b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1504805572947-34fad45aed93?fit=crop&w=1400&q=80') no-repeat center center/cover;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+
+.hero-content p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: #0f172a;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0ea5e9;
+}
+
+/* Features Section */
+.features {
+  padding: 80px 20px;
+  text-align: center;
+  background: #1e293b;
+}
+
+.features h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-card {
+  background: #334155;
+  padding: 30px;
+  border-radius: 10px;
+  width: 250px;
+  font-size: 1.1rem;
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  background: #0f172a;
+  padding: 20px;
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .feature-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background: #1e293b;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    padding: 20px;
+    display: none;
+  }
+}
